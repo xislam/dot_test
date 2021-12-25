@@ -16,9 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from api_for_bot.parser import ParsingAPI
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('pars/', ParsingAPI,)
 ]

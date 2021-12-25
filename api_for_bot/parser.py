@@ -1,5 +1,5 @@
 import requests
-from rest_framework.utils import json
+import json
 from api_for_bot.models import APIData, URL
 
 
@@ -20,6 +20,6 @@ class ParsingAPI:
                 modem_number=modem_number.split('.')[2],
                 city=city,
                 operator=operator,
-                data_time=data_time,
+                data_time=data_time.split(','),
 
             )

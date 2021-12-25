@@ -1,9 +1,8 @@
-from datetime import datetime
 from aiogram import Dispatcher, Bot, types
 from aiogram.types import KeyboardButton, ReplyKeyboardMarkup
 from aiogram.utils import executor
 from django.core.management.base import BaseCommand
-from django.shortcuts import get_object_or_404
+
 
 from api_for_bot.models import APIData
 
@@ -31,7 +30,6 @@ async def post(message: types.Message, ):
             city = item.city
             operator = item.operator
             data_time = item.data_time
-            print(item.sent)
             if item.sent == False:
                 await bot.send_message(message.chat.id, text=f'\n'
                                                              f'№ Сервера:{server_number}\n'
