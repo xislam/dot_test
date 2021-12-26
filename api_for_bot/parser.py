@@ -1,9 +1,11 @@
-import requests
 import json
-from api_for_bot.models import APIData, URL
+
+import requests
+
+from api_for_bot.models import URL, APIData
 
 
-class ParsingAPI:
+def parsing():
     urls = URL.objects.all()
     for url in urls:
         request = requests.get(url.url)
