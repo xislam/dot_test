@@ -3,7 +3,7 @@ import json
 from api_for_bot.models import APIData, URL
 
 
-class ParsingAPI:
+def parsing():
     urls = URL.objects.all()
     for url in urls:
         request = requests.get(url.url)
